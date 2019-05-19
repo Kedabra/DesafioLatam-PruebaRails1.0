@@ -1,0 +1,9 @@
+<div class="container">
+  <%= form_with model: @todo , local: true do |form| %>
+  <label>Description: </label>
+    <%= form.text_field :description %>
+    <label>Completed: </label>
+      <%= form.check_box :completed %>
+    <%= form.submit %>
+  <% end %>
+</div>

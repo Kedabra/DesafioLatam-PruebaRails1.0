@@ -1,0 +1,16 @@
+<div class="container">
+
+  <% @todos.each do |todo|%>
+    <div class="well">
+      <h1><%= todo.description %></h1>
+      <p><%= todo.completed %></p>
+      <p><%= link_to 'show', todo_path(todo)%></p>
+      <p><%= link_to 'edit', todo_edit_path(todo)%></p>
+      <p><%= link_to 'destroy', todo_path(todo), method: :delete%></p>
+      <%= link_to 'completed', todo_complete_path(todo), class: 'btn btn-success'%>
+    </div>
+
+ <% end %>
+
+ <%= link_to 'Crear Todo', todos_new_path%>
+</div>
